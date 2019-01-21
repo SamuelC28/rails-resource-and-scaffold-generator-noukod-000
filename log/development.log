@@ -76,3 +76,61 @@ Processing by ArticlesController#create as HTML
   [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
 Redirected to http://67.205.182.198:56586/articles/1
 Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/articles/1" for 190.102.85.235 at 2019-01-21 21:22:41 +0000
+Cannot render console from 190.102.85.235! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit" for 190.102.85.235 at 2019-01-21 21:22:47 +0000
+Cannot render console from 190.102.85.235! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 190.102.85.235 at 2019-01-21 21:22:50 +0000
+Cannot render console from 190.102.85.235! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 190.102.85.235 at 2019-01-21 21:23:58 +0000
+Cannot render console from 190.102.85.235! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1/edit" for 190.102.85.235 at 2019-01-21 21:24:02 +0000
+Cannot render console from 190.102.85.235! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (1.4ms)
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/1" for 190.102.85.235 at 2019-01-21 21:24:08 +0000
+Cannot render console from 190.102.85.235! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kxlaw8doLnTqSspxFG/Gf67OogcEmBhweZNskOlysssJTbD5u1678QEH+2T7amIzIoOEiMbpp5BvbCqz/YJKyA==", "article"=>{"title"=>"ssasasa", "body"=>"ddfvfghjjklkjkjhjhddddddhfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "articles" SET "body" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["body", "ddfvfghjjklkjkjhjhddddddhfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"], ["updated_at", "2019-01-21 21:24:08.398132"], ["id", 1]]
+  [1m[35m (6.1ms)[0m  commit transaction
+Redirected to http://67.205.182.198:56586/articles/1
+Completed 302 Found in 77ms (ActiveRecord: 6.6ms)
